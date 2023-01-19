@@ -1,11 +1,21 @@
+/* Home Page CSS Styling*/
+body {
+  padding:20px;
+}
 .header {
     background-color: lightpink;
     overflow: hidden;
+    margin-bottom:10px;
+    padding:10px;
+  }
+
+  .header h1 {
+    float:left;
+    margin-left:30px;
   }
   
-  /* Style the links inside the navigation bar */
   .header a {
-    float: left;
+    float: right;
     color: #220f0f;
     text-align: center;
     padding: 14px 16px;
@@ -13,13 +23,11 @@
     font-size: 17px;
   }
   
-  /* Change the color of links on hover */
   .header a:hover {
     background-color: rgb(255, 161, 161);
     color: rgb(255, 255, 255);
   }
   
-  /* Add a color to the active/current link */
   .topnav a.active {
     background-color: #b9b9b9;
     color: rgb(226, 128, 128);
@@ -35,14 +43,115 @@
     margin:10px;
 }
 
-#homeSearchTab{
+#homePage_productTab{
   background-color: pink;
   margin:10px;
   padding: 10px;
 }
 
-#homeResourcesTab{
+/*Resoruce tab styling*/
+
+#homePage_resourceTab{
+  box-sizing: border-box;
   background-color:lightpink;
   margin:10px;
   padding:10px;
+  width:100%
+}
+.home_resources_list {
+  width:100%;
+}
+.resource_tab_seeAll{
+  float:right;
+  padding:5px;
+}
+.resource_tab_seeAll:hover {
+  background-color:rgb(116, 23, 23);
+  border-color: black;
+  color:white
+}
+
+
+/* Home Page Slideshow Styling*/
+
+/* Slideshow container */
+.projectSlideshowContainer {
+  box-sizing:border-box;
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: left;
+  left:15px;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/*Resource Page CSS styling*/
+td {
+border-bottom:50px;
+}
+table {
+  border:black;
+  border-width:1px;
+  width:100%
+}
+.resource-card{
+  box-sizing:border-box;
+  position:relative;
+  margin:auto;
+}
+.resourceText {
+  color:brown;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  left:15px;
+}
+
+.resource-card:hover img {
+  opacity:50%;
+  animation-name:fade;
+}
+
+.resource-card:hover a {
+  display:inline;
+}
+
+.resource-card a:hover{
+  opacity:100%;
+}
+
+.resource-card a {
+  display:none;
+  background-color:brown;
+  padding:5px;
+  border-radius:4px;
+  color:white;
+  opacity:80%;
 }

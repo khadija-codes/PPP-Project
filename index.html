@@ -11,27 +11,107 @@
 </head>
 <body>
     <div class="header">
-        <a href="index.html"><p><strong>HOME</strong></p></a>
-        <a href="resources.html"><p><strong>RESOURCES</strong></p></a>
         <a href="products.html"><p><strong>PRODUCTS</strong></p></a>
+        <a href="resources.html"><p><strong>RESOURCES</strong></p></a>
+        <a href="index.html"><p><strong>HOME</strong></p></a>
+        <h1 id="homePageTitle">Period Poverty Project</h1>
     </div>
 
     <div id="hometitle">
-    <h1 id="homePageTitle">Period Poverty Project</h1>
     </div>
 
-    <div id="projectOverview">
-        <div class="slideShow">
-        <h2>What is Period Poverty?</h2>
-        <p>insert text here</p>
+<!-- Slide Show Section-->
+    <div class="projectSlideshowContainer">
+
+        <div class="mySlides fade">
+            <img src="img1.jpg" style="width:100%">
+            <div class="text">
+                <h2 class="slideshowFactBold">What is Period Poverty?</h2>
+                <p class="slideshowFact">info info info</p>
+            </div>
+          </div>
+        
+          <div class="mySlides fade">
+            <img src="img1.jpg" style="width:100%">
+            <div class="text">
+                <h2 class="slideshowFactBold">DID YOU KNOW</h2>
+                <p class="slideshowFact">info info info</p>
+            </div>
+          </div>
+        
+          <div class="mySlides fade">
+            <img src="img3.jpg" style="width:100%">
+            <div class="text">
+                <h2 class="slideshowFactBold">This Website</h2>
+                <p class="slideshowFact">Provides resources that help alleviate lack of access to feminine hygine products and can help you find affordable period products.</p>
+            </div>
+          </div>
         </div>
+        <br>
+
+        <script>
+            let slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].style.display = "block";
+            setTimeout(showSlides, 15000);
+            }
+
+        </script>
     </div>
-    
-    <div id="homeSearchTab">
+
+<!--Slideshow Section end-->
+
+    <div id="homePage_productTab">
         <h2>Product Search</h2>
     </div>
-    <div id="homeResourcesTab">
+
+    <div id="homePage_resourceTab">
         <h2>Resources</h2> 
+        <table class="home_resources_list">
+            <tr>
+                <td>
+                <div class="resource-card">
+                    <img class="resource-image" src="resource img1.jpg">
+                    <div class="resourceText">
+                        <h3>Resource 1</h3>
+                        <p>resource summary</p>
+                        <p class="resourceExternalLink"><a href="https://www.w3schools.com/howto/howto_js_slideshow.asp">Go to Website</a></p>
+                    </div>
+                </div>
+                </td>
+                <td>
+                <div class="resource-card">
+                    <img class="resource-image" src="resource img2.jpg">
+                    <div class="resourceText">
+                        <h3>Resource 1</h3>
+                        <p>resource summary</p>
+                        <p class="resourceExternalLink"><a href="https://www.w3schools.com/howto/howto_js_slideshow.asp">Go to Website</a></p>
+                    </div>
+                </div>
+                </td>
+                <td>
+                    <div class="resource-card">
+                        <img class="resource-image" src="resource img3.jpg">
+                        <div class="resourceText">
+                            <h3>Resource 1</h3>
+                            <p>resource summary</p>
+                            <p class="resourceExternalLink"><a href="https://www.w3schools.com/howto/howto_js_slideshow.asp">Go to Website</a></p>
+                        </div>
+                    </div>
+                    <a class="resource_tab_seeAll" href="resources.html">See All</a>
+
+                </td>
+            </tr>
+        </table>
     </div>
 
 </body>
